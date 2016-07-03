@@ -31,7 +31,7 @@ namespace Sensors.OneWire
             base.OnNavigatedTo(e);
 
 			_pin = GpioController.GetDefault().OpenPin(17, GpioSharingMode.Exclusive);
-            _dht = new Dht22(_pin, GpioPinDriveMode.Input);
+            _dht = new Dht11(_pin, GpioPinDriveMode.Input);
 
             _timer.Start();
 
